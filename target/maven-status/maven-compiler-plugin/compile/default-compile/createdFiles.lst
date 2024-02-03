@@ -1,0 +1,5 @@
+com\test\quizapp\entity\Question.class
+com\test\quizapp\QuizappApplication.class
+com\test\quizapp\service\QuestionService.class
+com\test\quizapp\repository\QuestionDAO.class
+com\test\quizapp\controller\QuestionController.class
