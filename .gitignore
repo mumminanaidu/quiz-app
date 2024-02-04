@@ -27,5 +27,6 @@ replay_pid*
 .project
 .factorypath
 .classpath
-*.lst
+.lst
 .original
+.properties
