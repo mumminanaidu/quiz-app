@@ -25,3 +25,7 @@ replay_pid*
 *.prefs
 *.class
 .project
+.factorypath
+.classpath
+*.lst
+.original
