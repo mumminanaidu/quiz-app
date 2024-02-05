@@ -67,13 +67,18 @@ VALUES
 
 ```
 
+```sql
+select id, right_answer from question
+where id=7 or id=3 or id=12 or id=14 or id=9
+
+```
 ## Postman Collection
 
 To interact with the Quiz App's APIs, you can use the provided Postman collection. Import the collection using the following link:
 
-[Quiz App Postman Collection](link-to-your-exported-collection)
+[Quiz App Postman Collection](https://api.postman.com/collections/26661506-eb1492a8-992e-4db1-b404-753d74eb4096?access_key=PMAT-01HNW285HYE2JSM4MC2VJF0BF0)
 
 ## References
 
-- [Your YouTube Video Title](link-to-your-video) - This project was created based on the instructions provided in this YouTube video.
+- [ YouTube Video ](https://youtu.be/vlz9ina4Usk) - This project was created based on the instructions provided in this YouTube video.
 
