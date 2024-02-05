@@ -76,7 +76,7 @@ where id=7 or id=3 or id=12 or id=14 or id=9
 
 To interact with the Quiz App's APIs, you can use the provided Postman collection. Import the collection using the following link:
 
-[Quiz App Postman Collection](https://api.postman.com/collections/26661506-eb1492a8-992e-4db1-b404-753d74eb4096?access_key=PMAT-01HNW285HYE2JSM4MC2VJF0BF0)
+[Quiz App Postman Collection]()
 
 ## References
 
