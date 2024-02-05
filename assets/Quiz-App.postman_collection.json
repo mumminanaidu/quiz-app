@@ -1,0 +1,265 @@
+{
+	"info": {
+		"_postman_id": "eb1492a8-992e-4db1-b404-753d74eb4096",
+		"name": "Quiz-App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26661506",
+		"_collection_link": "https://bold-desert-802892.postman.co/workspace/local-demo~e222c185-e6e0-4d67-97ee-08028365db24/collection/26661506-eb1492a8-992e-4db1-b404-753d74eb4096?action=share&source=collection_link&creator=26661506"
+	},
+	"item": [
+		{
+			"name": "question-apis",
+			"item": [
+				{
+					"name": "get-all-questions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/question/allQuestions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"question",
+								"allQuestions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByCategory",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/question/category/Python",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"question",
+								"category",
+								"Python"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add-question-fail",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 2,\r\n    \"option1\": \"21\",\r\n    \"option2\": \"17\",\r\n    \"rightAnswer\": \"21\",\r\n    \"difficultyLevel\": \"Medium\",\r\n    \"category\": \"Java\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/question/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"question",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add-question-pass",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"questionTitle\": \"What is the output of 1 + 5 * 3 in Java?\",\r\n  \"option1\": \"16\",\r\n  \"option2\": \"17\",\r\n  \"option3\": \"23\",\r\n  \"option4\": \"16\",\r\n  \"rightAnswer\": \"16\",\r\n  \"difficultyLevel\": \"Medium\",\r\n  \"category\": \"Java\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/question/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"question",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-question",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"questionTitle\": \"What is the output of 1 + 5 * 3 in Java?\",\r\n  \"option1\": \"16\",\r\n  \"option2\": \"17\",\r\n  \"option3\": \"23\",\r\n  \"option4\": \"16\",\r\n  \"rightAnswer\": \"16\",\r\n  \"difficultyLevel\": \"Medium\",\r\n  \"category\": \"Java\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/question/update/51",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"question",
+								"update",
+								"51"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-question",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"questionTitle\": \"What is the output of 1 + 5 * 3 in Java?\",\r\n  \"option1\": \"16\",\r\n  \"option2\": \"17\",\r\n  \"option3\": \"23\",\r\n  \"option4\": \"16\",\r\n  \"rightAnswer\": \"16\",\r\n  \"difficultyLevel\": \"Medium\",\r\n  \"category\": \"Java\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/question/delete/11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"question",
+								"delete",
+								"11"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "quiz-apis",
+			"item": [
+				{
+					"name": "quiz-post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/quiz/create?category=Java&numQ=5&title=JQuiz",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"quiz",
+								"create"
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "Java"
+								},
+								{
+									"key": "numQ",
+									"value": "5"
+								},
+								{
+									"key": "title",
+									"value": "JQuiz"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-quiz-by-id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/quiz/get/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"quiz",
+								"get",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "submit-ans",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"id\": 7,\r\n        \"response\": \"4\"\r\n    },\r\n    {\r\n        \"id\": 3,\r\n        \"response\": \"final\"\r\n    },\r\n    {\r\n        \"id\": 12,\r\n        \"response\": \"16\"\r\n    },\r\n    {\r\n        \"id\": 14,\r\n        \"response\": \"To refer to the current instance of the class\"\r\n    },\r\n    {\r\n        \"id\": 9,\r\n        \"response\": \"goto\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/quiz/submit/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"quiz",
+								"submit",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
